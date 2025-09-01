@@ -1,13 +1,14 @@
 {
   "name": "facebook-video-scheduler-client",
   "version": "1.0.0",
-  "description": "Frontend for Facebook Video Scheduler",
-  "main": "index.js",
+  "homepage": "https://yourgithubusername.github.io/facebook-video-scheduler",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -20,7 +21,8 @@
   "devDependencies": {
     "tailwindcss": "^3.3.3",
     "autoprefixer": "^10.4.15",
-    "postcss": "^8.4.29"
+    "postcss": "^8.4.29",
+    "gh-pages": "^6.0.0"
   },
   "browserslist": {
     "production": [
