@@ -1,4 +1,3 @@
-// Client/src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
@@ -7,10 +6,9 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import axios from 'axios';
-import { API_BASE_URL } from './config';
 
-// Set axios base URL
-axios.defaults.baseURL = API_BASE_URL;
+// Set axios base URL for your Render backend
+axios.defaults.baseURL = 'https://facebook-video-scheduler-jaxg.onrender.com';
 
 function App() {
   return (
